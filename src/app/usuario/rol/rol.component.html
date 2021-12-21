@@ -1,0 +1,68 @@
+<!--breadcrumb-->
+<div class="page-breadcrumb d-none d-sm-flex align-objRols-center mb-3">
+  <div class="breadcrumb-title pe-3">Rol</div>
+  <div class="ps-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0 p-0">
+        <li class="breadcrumb-objRol active" aria-current="page">Listado</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<!--end breadcrumb-->
+
+<div class="card">
+  <div class="card-body">
+    <div class="d-lg-flex align-objRols-center mb-4 gap-3">
+      <div class="ms-auto">
+        <a
+          [routerLink]="['/usuario/crear-rol']" 
+          class="btn radius-30 mt-2 mt-lg-0"
+          ><i class="bx bxs-plus-square"></i>Agregar nuevo rol</a
+        >
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table mb-0">
+        <thead class="table-light">
+          <tr>
+            <th># Código</th>
+            <th>Detalle</th>
+            <th>Accion</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let objRol of roles">
+            <td>
+              <div class="d-flex align-objRols-center">
+                <div class="ms-2">
+                  <h6 class="mb-0 font-14">{{objRol.cod_rol}}</h6>
+                </div>
+              </div>
+            </td>
+            <td>{{objRol.detalle_rol}}</td>
+            <!-- <td style="text-align: center; vertical-align: middle;">
+              <div class="d-flex order-actions">
+                <a (click)="$event.preventDefault()" class="ms-3"
+                  ><i class="bx bxs-edit"></i
+                ></a>
+              </div>
+              <div class="d-flex order-actions">
+                <a  (click)="deleteFuncionalidad(objRol)" class="ms-3"
+                  ><i class="bx bxs-trash"></i
+                ></a>
+              </div>
+            </td> -->
+            <td style="vertical-align: middle;">
+              <i class="bx bxs-edit bx-sm" style="color: rgb(34, 34, 201);"></i> &nbsp;
+              <i class="bx bxs-trash bx-sm " style="color: rgb(207, 40, 40);" (click)="deleteRol(objRol)"></i>
+                 
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>  

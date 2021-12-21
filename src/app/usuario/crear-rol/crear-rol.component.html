@@ -1,0 +1,43 @@
+<div class="container-fluid w-75 p-3">
+  <h6 class="mb-0 text-uppercase">Crear nueva rol</h6>
+  <hr />
+  <div class="card">
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Código rol</label>
+          <input
+            type="text"
+            min="1"
+            class="form-control"
+            id="cod_rol"
+            required
+            [(ngModel)]="rol.cod_rol"
+            name="cod_rol"
+          />
+        </div>
+                <div class="mb-3">
+          <label class="form-label">Detalle rol</label>
+          <input
+            type="text"
+            min="1"
+            class="form-control"
+            id="cod_rol"
+            required
+            [(ngModel)]="rol.detalle_rol"
+            name="cod_rol"
+          />
+        </div>
+
+        <div class="col-12">
+          <button
+            (click)="saveRol()"
+            class="btn btn-outline-success px-5"
+          >
+            Crear
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

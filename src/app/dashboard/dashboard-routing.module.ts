@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+
 import { ProcesoComponent } from './proceso/proceso.component';
 import { ProgramaComponent } from './programa-academico/programa.academicocomponent';
 
@@ -17,7 +18,7 @@ const routes: Routes = [
       },
       {
         path: 'crear-programa',
-  
+        
         data: {
           title: 'crear-programa'
         }

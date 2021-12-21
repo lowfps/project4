@@ -1,0 +1,53 @@
+<p>crear-programa works!</p>
+<div class="container-fluid w-75 p-3">
+  <h6 class="mb-0 text-uppercase">Crear nueva programa</h6>
+  <hr />
+  <div class="card">
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Código programa</label>
+          <input
+            type="text"
+            min="1"
+            class="form-control"
+            id="cod_programa"
+            required
+            [(ngModel)]="programa.cod_programa"
+            name="cod_programa"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Nombre Programa</label>
+          <input
+            type="text"
+            min="1"
+            class="form-control"
+            id="nombre_programa"
+            required
+            [(ngModel)]="programa.nombre_programa"
+            name="nombre_programa"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Fecha creación</label>
+          <input
+            type="text"
+            min="1"
+            class="form-control"
+            id="fechacreacion_programa"
+            required
+            [(ngModel)]="programa.fechacreacion_programa"
+            name="fechacreacion_programa"
+          />
+        </div>
+
+        <div class="col-12">
+          <button (click)="savePrograma()" class="btn btn-outline-success px-5">
+            Crear
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -18,6 +18,7 @@ export class ProgramaComponent implements OnInit {
 
   ngOnInit(): void {
     $.getScript('./assets/js/e-commerce-dashboard.js');
+    
   }
 
   
